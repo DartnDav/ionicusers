@@ -4,17 +4,25 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { UsersPage } from './users/users.page';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
+
 export class AppComponent {
   public appPages = [
     {
       title: 'Home',
       url: '/home',
       icon: 'home'
+    },
+    {
+      title: 'Users',
+      url: '/users',
+      icon: 'users'
     },
     {
       title: 'List',
