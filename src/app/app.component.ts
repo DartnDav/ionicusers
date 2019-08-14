@@ -22,7 +22,7 @@ export class AppComponent {
     {
       title: 'Users',
       url: '/users',
-      icon: 'users'
+      icon: 'people'
     },
     {
       title: 'List',
