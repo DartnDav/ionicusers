@@ -44,6 +44,9 @@ export class UsersService {
   user(id: string): Observable<User> {
     return this.http.get<User>(this.url + id);
   }
+  createUser(user: User): Observable<User> {
+    return this.http.post<User>(this.url, user, httpOptions);
+  }
   edit(user: User): Observable<User> {
     return this.http.post<User>(this.url, user, httpOptions);
   }
@@ -58,9 +61,7 @@ export class UsersService {
 
 
 
-//   createUser (user: User): Observable<User> {
-//     return this.http.post<User>(this.url, user, httpOptions);
-//   }
+
 
 //   editUser (user: User): Observable<User> {
 //     return this.http.put<User>(this.url, user, httpOptions);
