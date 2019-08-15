@@ -30,11 +30,9 @@ export class UsersService {
   getUser(id: string): Observable<User> {
     return this.http.get<User>(`${this.url}/${id}`);
   }
-
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
   }
-
   users(): Observable<User> {
     return this.http.get<User>(this.url);
   }
@@ -50,7 +48,6 @@ export class UsersService {
   edit(user: User): Observable<User> {
     return this.http.post<User>(this.url, user, httpOptions);
   }
-
   delete(id: string): Observable<User> {
     return this.http.delete<User>(this.url + id);
   }

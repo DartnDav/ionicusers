@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'users', loadChildren: './users/users.module#UsersPageModule' },
   { path: 'user', loadChildren: './user/user.module#UserPageModule' },
   { path: 'user/:id', loadChildren: './user/user.module#UserPageModule' },
-  { path: 'user-create', loadChildren: './user-create/user-create.module#UserCreatePageModule' }
+  { path: 'user-create', loadChildren: './user-create/user-create.module#UserCreatePageModule' },
+  { path: 'user-edit', loadChildren: './user-edit/user-edit.module#UserEditPageModule' }
 ];
 
 @NgModule({
