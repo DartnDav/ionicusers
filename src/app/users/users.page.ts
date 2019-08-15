@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { UsersService } from './../users.service';
@@ -24,7 +24,7 @@ export class UsersPage {
   }
 
   getUsers(): void {
-    this.usersService.users().subscribe(
+    this.usersService.getUsers().subscribe(
       (response: any) => {
         this.users = response.users;
       }

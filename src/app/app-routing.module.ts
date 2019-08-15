@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'logout', loadChildren: './logout/logout.module#LogoutPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'users', loadChildren: './users/users.module#UsersPageModule' },
-  { path: 'user', loadChildren: './user/user.module#UserPageModule' }
+  { path: 'user', loadChildren: './user/user.module#UserPageModule' },
+  { path: 'user/:id', loadChildren: './user/user.module#UserPageModule' }
 ];
 
 @NgModule({
@@ -28,4 +29,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
