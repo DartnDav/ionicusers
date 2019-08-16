@@ -22,12 +22,12 @@ const routes: Routes = [
   { path: 'user', loadChildren: './user/user.module#UserPageModule' },
   { path: 'user/:id', loadChildren: './user/user.module#UserPageModule' },
   { path: 'user-create', loadChildren: './user-create/user-create.module#UserCreatePageModule' },
-  { path: 'user-edit', loadChildren: './user-edit/user-edit.module#UserEditPageModule' }
+  { path: 'user-edit/:id', loadChildren: './user-edit/user-edit.module#UserEditPageModule' }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes),
   ],
   exports: [RouterModule]
 })
