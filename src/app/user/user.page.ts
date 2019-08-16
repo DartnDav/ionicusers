@@ -24,14 +24,6 @@ export class UserPage implements OnInit {
     this.getUser(id);
   }
 
-  deleteUser(id: string): void {
-    if (confirm("Are you sure to delete " + this.user.username)) {
-      this.usersService.deleteUser(id).subscribe(
-        () => { this.router.navigate(['/users']) }
-      );
-    }
-  }
-
   getUser(id: string): void {
     this.usersService.getUser(id).subscribe(
       (response: any) => {
@@ -40,4 +32,5 @@ export class UserPage implements OnInit {
       }
     );
   }
+
 }
