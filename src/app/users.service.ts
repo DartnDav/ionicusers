@@ -51,8 +51,8 @@ export class UsersService {
   editUser(user: User): Observable<User> {
     return this.http.put<User>(this.url, user, httpOptions);
   }
-  delete(id: string): Observable<User> {
-    return this.http.delete<User>(this.url + id);
+  deleteUser(id: string): Observable<User> {
+    return this.http.delete<User>(`${this.url}/${id}`);
   }
 }
 
